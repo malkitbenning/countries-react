@@ -1,6 +1,8 @@
 .country-card {
   border: 1px solid var(--dark-gray-light-mode); 
+  flex: 0 0 18em;
 }
+
 
 .card-details-container{
   padding: 1rem 1rem 2.5rem 1rem;
