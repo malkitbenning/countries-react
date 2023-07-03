@@ -1,0 +1,23 @@
+.country-card {
+  border: 1px solid var(--dark-gray-light-mode); 
+}
+
+.card-details-container{
+  padding: 1rem 1rem 2.5rem 1rem;
+}
+
+.country-title {
+  font-weight: 800;
+
+}
+
+.strong-text {
+  font-weight: 600;
+  margin: 0px;
+
+}
+
+.normal-text {
+  font-weight: 400;
+  margin: 0px;
+}
