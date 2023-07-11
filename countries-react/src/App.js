@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import countriesAll from "./countriesAll.json";
 import SearchBar from "./SearchBar";
 import Countries from "./Countries";
@@ -8,6 +8,14 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
   const [countriesListFiltered, setCountriesListFiltered] =
     useState(countriesAll);
+  const [regionList, setRegionList] = useState([]);
+
+  useEffect(() => {
+    setRegionList([
+      "none",
+      ...new Set(countriesAll.map((item) => item.region)),
+    ]);
+  }, []);
 
   return (
     <div className="App">
@@ -21,6 +29,7 @@ function App() {
           countriesListFiltered={countriesListFiltered}
           setCountriesListFiltered={setCountriesListFiltered}
           countriesAll={countriesAll}
+          regionList={regionList}
         />
       </section>
       <section>

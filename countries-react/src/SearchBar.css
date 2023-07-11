@@ -1,10 +1,12 @@
 .search-bar {
   padding: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-input {
   padding-left: 2rem;
-  width: 80%;
+  width: 15rem;
   font-size: large;
   border: none;
 }
@@ -16,5 +18,5 @@
   border: 1px solid var(--dark-gray-light-mode); ;
   border-radius: 15px;
   padding: 0.5rem;
-  width: 30%;
+  width: 25rem;
 }
