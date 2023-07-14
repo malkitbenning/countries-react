@@ -27,11 +27,7 @@ function SearchBar(props) {
       setCountriesListFiltered([...countriesList]);
     } else {
       let filterArray = countriesList.filter((aCountry) => {
-        return (
-          aCountry.name.toUpperCase().includes(searchInput.toUpperCase()) ||
-          (aCountry.capital &&
-            aCountry.capital.toUpperCase().includes(searchInput.toUpperCase()))
-        );
+        return aCountry.name.toUpperCase().includes(searchInput.toUpperCase()) || (aCountry.capital && aCountry.capital.toUpperCase().includes(searchInput.toUpperCase()));
       });
       setCountriesListFiltered([...filterArray]);
     }
