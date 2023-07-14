@@ -1,4 +1,3 @@
-import CardImageContainer from "./CardImageContainer";
 import CountryDetailsContainer from "./CountryDetailsContainer";
 import "./CountryDetails.css";
 

@@ -3,37 +3,42 @@ import "./SearchBar.css";
 import RegionSelect from "./RegionSelect";
 
 function SearchBar(props) {
+
+  const {
+    searchInput,
+    setSearchInput,
+    setCountriesListFiltered,
+    countriesAll,
+    regionList,
+  } = props;
+
   const [chosenRegion, setChosenRegion] = useState("none");
 
   useEffect(() => {
     let countriesList = [];
     if (chosenRegion === "none") {
-      countriesList = [...props.countriesAll];
+      countriesList = [...countriesAll];
     } else {
-      countriesList = props.countriesAll.filter((aCountry) => {
+      countriesList = countriesAll.filter((aCountry) => {
         return aCountry.region === chosenRegion;
       });
     }
-    if (props.searchInput === "") {
-      props.setCountriesListFiltered([...countriesList]);
+    if (searchInput === "") {
+      setCountriesListFiltered([...countriesList]);
     } else {
       let filterArray = countriesList.filter((aCountry) => {
         return (
-          aCountry.name
-            .toUpperCase()
-            .includes(props.searchInput.toUpperCase()) ||
+          aCountry.name.toUpperCase().includes(searchInput.toUpperCase()) ||
           (aCountry.capital &&
-            aCountry.capital
-              .toUpperCase()
-              .includes(props.searchInput.toUpperCase()))
+            aCountry.capital.toUpperCase().includes(searchInput.toUpperCase()))
         );
       });
-      props.setCountriesListFiltered([...filterArray]);
+      setCountriesListFiltered([...filterArray]);
     }
-  }, [props.searchInput, chosenRegion]);
+  }, [searchInput, chosenRegion, countriesAll, setCountriesListFiltered]);
 
   function handleSearchChange(event) {
-    props.setSearchInput(event.target.value);
+    setSearchInput(event.target.value);
   }
 
   return (
@@ -43,7 +48,7 @@ function SearchBar(props) {
         <input
           className="search-input"
           type="text"
-          value={props.searchInput}
+          value={searchInput}
           // onChange={updateSearchInput}
           onChange={handleSearchChange}
           placeholder="Search for a country..."
@@ -51,7 +56,7 @@ function SearchBar(props) {
       </div>
       <div>
         <RegionSelect
-          regionList={props.regionList}
+          regionList={regionList}
           chosenRegion={chosenRegion}
           setChosenRegion={setChosenRegion}
         />

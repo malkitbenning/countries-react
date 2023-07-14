@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./RegionSelect.css";
 
 function RegionSelect(props) {

@@ -1,9 +1,7 @@
 function BorderButtons(props) {
   function clickHandler(aBorder) {
-    {
-      console.log(aBorder);
-      props.setACountryKey(aBorder);
-    }
+    console.log(aBorder);
+    props.setACountryKey(aBorder);
   }
 
   return (

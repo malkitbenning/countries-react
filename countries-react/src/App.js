@@ -40,7 +40,6 @@ function App() {
           <SearchBar
             searchInput={searchInput}
             setSearchInput={setSearchInput}
-            countriesListFiltered={countriesListFiltered}
             setCountriesListFiltered={setCountriesListFiltered}
             countriesAll={countriesAll}
             regionList={regionList}
