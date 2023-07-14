@@ -1,0 +1,13 @@
+.cd-details-area{
+  display: flex;
+  gap: 1rem;
+}
+
+
+.cd-flag-container{
+  width: 30rem;
+}
+
+.cd-flag-img{
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+.country-details-container{
+  margin-left: 1rem;
+  padding: 1rem 1rem 2.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cd-details-subtitle {
+  font-weight: 700;
+}
+
+.cd-details-text {
+  font-weight: 400;
+}
+
+
+.cd-flag-container{
+  width: 30rem;
+  
+}
+
+.cd-flag-img{
+  width: 100%;
+}

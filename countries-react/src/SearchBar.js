@@ -7,7 +7,6 @@ function SearchBar(props) {
 
   useEffect(() => {
     let countriesList = [];
-    console.log("region: ", chosenRegion);
     if (chosenRegion === "none") {
       countriesList = [...props.countriesAll];
     } else {

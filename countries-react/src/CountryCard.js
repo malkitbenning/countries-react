@@ -4,7 +4,12 @@ import "./CountryCard.css";
 function CountryCard(props) {
   return (
     <div className="country-card">
-      <CardImageContainer flagURL={props.aCountry.flag} />
+      <CardImageContainer
+        countryId={props.countryId}
+        flagURL={props.aCountry.flag}
+        setCountryClicked={props.setCountryClicked}
+        setACountryKey={props.setACountryKey}
+      />
       <div className="card-details-container">
         <p className="country-title">{props.aCountry.name}</p>
         <p className="strong-text">
