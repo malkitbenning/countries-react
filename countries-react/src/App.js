@@ -7,8 +7,7 @@ import "./App.css";
 
 function App() {
   const [searchInput, setSearchInput] = useState("");
-  const [countriesListFiltered, setCountriesListFiltered] =
-    useState(countriesAll);
+  const [countriesListFiltered, setCountriesListFiltered] = useState(countriesAll);
   const [regionList, setRegionList] = useState([]);
   const [countryClicked, setCountryClicked] = useState(false);
   const [aCountryKey, setACountryKey] = useState("");
